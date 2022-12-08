@@ -13,7 +13,7 @@
     list-style: none;
     padding: 0;
   }
-  .outer-div .house-card {
+  .outer-div .house-page {
     position: relative;
     width: 300px;
     display: flex;
@@ -33,7 +33,7 @@
     transition: 0.3s;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   }
-  .outer-div .house-card::before {
+  .outer-div .house-page::before {
     content: '';
     position: absolute;
     top: 0;
@@ -43,10 +43,10 @@
     background: rgba(10, 72, 112, 0);
     transition: 0.3s;
   }
-  .outer-div .house-card .button-div {
+  .outer-div .house-page .button-div {
     height: 200px;
   }
-  .outer-div .house-card .button-div .content {
+  .outer-div .house-page .button-div .content {
     position: relative;
     opacity: 0;
     display: flex;
@@ -57,7 +57,7 @@
     transform: translateY(-200px);
     transition: 0.3s;
   }
-  .outer-div .house-card .button-div .content .btn {
+  .outer-div .house-page .button-div .content .btn {
     border: 3px solid white;
     padding: 10px 15px;
     background: none;
@@ -68,26 +68,26 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  .outer-div .house-card .button-div .content .btn:hover {
+  .outer-div .house-page .button-div .content .btn:hover {
     background: white;
     border: 0px solid white;
     color: #31525B;
   }
-  .outer-div .house-card .information-container {
+  .outer-div .house-page .information-container {
     flex: 1 0 auto;
     padding: 20px;
     background: #F0F0F0;
     transform: translateY(206px);
     transition: 0.3s;
   }
-  .outer-div .house-card .information-container .title {
+  .outer-div .house-page .information-container .title {
     position: relative;
     padding-bottom: 10px;
     margin-bottom: 10px;
     font-weight: bold;
     font-size: 1.2em;
   }
-  .outer-div .house-card .information-container .title::after {
+  .outer-div .house-page .information-container .title::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -98,20 +98,20 @@
     margin: auto;
     background: #31525B;
   }
-  .outer-div .house-card .information-container .subtitle {
+  .outer-div .house-page .information-container .subtitle {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
   }
-  .outer-div .house-card .information-container .more-information {
+  .outer-div .house-page .information-container .more-information {
     opacity: 0;
     transition: 0.3s;
   }
-  .outer-div .house-card .information-container .more-information .ratings-and-price-container {
+  .outer-div .house-page .information-container .more-information .ratings-and-price-container {
     display: flex;
   }
-  .outer-div .house-card .information-container .more-information .ratings-and-price-container .box {
+  .outer-div .house-page.information-container .more-information .ratings-and-price-container .box {
     flex: 1 0;
     padding: 15px;
     margin-top: 20px;
@@ -122,40 +122,40 @@
     font-weight: bold;
     font-size: 0.9em;
   }
-  .outer-div .house-card .information-container .more-information .ratings-and-price-container .box.ratings {
+  .outer-div .house-page .information-container .more-information .ratings-and-price-container .box.ratings {
     color: #FFA101;
     margin-right: 10px;
   }
-  .outer-div .house-card .information-container .more-information .description {
+  .outer-div .house-page .information-container .more-information .description {
     margin-top: 20px;
     font-size: 0.8em;
     color: #7D7D7D;
   }
-  .outer-div .house-card:hover::before {
+  .outer-div .house-page:hover::before {
     background: rgba(10, 72, 112, 0.6);
   }
-  .outer-div .house-card:hover .button-div .content {
+  .outer-div .house-page:hover .button-div .content {
     opacity: 1;
     transform: translateY(0px);
   }
-  .outer-div .house-card:hover .information-container {
+  .outer-div .house-page:hover .information-container {
     transform: translateY(0px);
   }
-  .outer-div .house-card:hover .information-container .more-information {
+  .outer-div .house-page:hover .information-container .more-information {
     opacity: 1;
   }
   @media (max-width: 768px) {
-    .outer-div .house-card::before {
+    .outer-div .house-page::before {
         background: rgba(10, 72, 112, 0.6);
   }
-  .outer-div .house-card .button-div .content {
+  .outer-div .house-page .button-div .content {
         opacity: 1;
         transform: translateY(0px);
   }
-  .outer-div .house-card .information-container {
+  .outer-div .house-page .information-container {
         transform: translateY(0px);
   }
-  .outer-div .house-card .information-container .more-information {
+  .outer-div .house-page .information-container .more-information {
         opacity: 1;
   }
   }
