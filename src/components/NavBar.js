@@ -1,48 +1,74 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa';
-import { links} from './data';
-// import logo from './logo.svg';
+// import React from 'react';
+// import "./NavBar.css"
+// // import logo from '../img/png-clipart-gym-logo-mark-gym.png';
+// import { NavLink, Link } from 'react-router-dom';
 
-const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
-  const toggleLinks = () => {
-    setShowLinks(!showLinks);
-  };
-  useEffect(() => {
-    const linksHeight = linksRef.current.getBoundingClientRect().height;
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = '0px';
-    }
-  }, [showLinks]);
-  return (
-    <nav>
-      <div className='nav-center'>
-        <div className='nav-header'>
-          {/* <img src={logo} className='logo' alt='logo' /> */}
-          <button className='nav-toggle' onClick={toggleLinks}>
-            <FaBars />
-          </button>
-        </div>
-        <div className='links-container' ref={linksContainerRef}>
-          <ul className='links' ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <a href={url}>{text}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+// function NavBar() {
+//   return (
+//     <header>
+//       <div class='menubar'>
+//         <Link to='/' style={{ color: '#ea4e3a', textDecoration: 'none' }}>
+//           <div class='logo'>
+//             {/* <img src={logo} alt='logo' /> */}
+//             <h1>Travelling Adventure</h1>
+//           </div>
+//         </Link>
+//         <nav>
+//           <ul>
+//             <li>
+//               <NavLink
+//                 exact
+//                 to='/'
+//                 className={({ isActive }) =>
+//                   isActive ? 'link active' : 'link'
+//                 }
+//               >
+//                 Home
+//               </NavLink>
+//             </li>
+//             <li>
+//               <NavLink
+//                 exact
+//                 to='/workouts'
+//                 className={({ isActive }) =>
+//                   isActive ? 'link active' : 'link'
+//                 }
+//               >
+//                 Workouts
+//               </NavLink>
+//             </li>
+//             <li>
+//               <NavLink
+//                 exact
+//                 to='/trainers'
+//                 className={({ isActive }) =>
+//                   isActive ? 'link active' : 'link'
+//                 }
+//               >
+//                 Trainers
+//               </NavLink>
+//             </li>
+//             <li>
+//               <NavLink
+//                 to='/contact'
+//                 exact
+//                 className={({ isActive }) =>
+//                   isActive ? 'link active' : 'link'
+//                 }
+//               >
+//                 Contact Us
+//               </NavLink>
+//             </li>
+//           </ul>
+//         </nav>
+//         <Link exact to='/login' id='menu-login-link'>
+//           <button type='button' id='menu-login-button'>
+//             LOG IN
+//           </button>
+//         </Link>
+//       </div>
+//     </header>
+//   );
+//   }
+  
+//   export default NavBar;
