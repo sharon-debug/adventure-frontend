@@ -9,7 +9,7 @@ function ReviewContainer() {
  useEffect(()=>{
   fetch("http://127.0.0.1:3000/reviews")
   .then((response)=>response.json())
-  .then((reviews)=>{console.log(reviews)})
+  .then((reviews)=>{setReviews(reviews)})
  },[])
 
   const reviewList = reviews.map((review) => (

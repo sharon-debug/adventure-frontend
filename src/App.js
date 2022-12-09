@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Home from "./components/Home";
 import HouseContainer from "./components/House/HouseContainer";
 import {HouseContext} from "./components/HouseContext";
 import  HousePage from "./components/HousePage/HousePage";
@@ -10,21 +11,20 @@ import ReviewContainer from  "./components/Reviews/ReviewContainer";
 import Footer from "./components/Footer";
 // import SignUp from "./Components/Signup/Signup";
 import "./index.css";
-import Home from "./components/Home";
+
 
 function App() {
     return (
       
       <div className="App">
         <BrowserRouter>
-        <NavBar/> 
-         {/* <Home/> */}
-         <ReviewContainer/>
+        <NavBar/>
+       
 
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route  path="/houses" element={<HousePage/>}/>
-          {/* <Route  path="/reviews" element={<Review/>}/> */}
+          <Route  path="/reviews" element={<ReviewContainer/>}/>
           {/* <Route path="/contact" element={<ContactUs/>}/> */}
           <Route path="login" element={<Login/>}/>
           </Routes>

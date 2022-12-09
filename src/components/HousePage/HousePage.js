@@ -19,13 +19,7 @@ export default function HousePage () {
 
   return (
     <>
-      {/* {houseError.length > 0
-        ? houseError.map((error, index) => (
-            <span key={index} className="error">
-              {error}
-            </span>
-          ))
-        : null} */}
+    
       <div className="house-page">
         
           {houses.map((house)=>{
