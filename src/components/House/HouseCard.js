@@ -6,11 +6,11 @@ function HouseCard({house}){
   
  
   return (
-    <div className="house-card">
-      <div className="house-img">
+    <div className="house">
+      <div className="houseimage">
         <img src={house.image} alt={house.name} />
       </div>
-      <div className="house-info">
+      <div className="houseinfo">
         
         <h4> {house.location} </h4>
          <p>    {house.description} </p>
