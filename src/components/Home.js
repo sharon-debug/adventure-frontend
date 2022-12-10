@@ -1,12 +1,14 @@
 import React from 'react';
 import './Home.css';
-// import bannerimg from '../img/jump-fitness-workout1.png';
-import { Link } from "react-router-dom"
+import Homeimage from "./images/Homeimage.jpg"
 
 function Home() {
   return (
     <div>
       <div className='home-banner'>
+        <div className="home-banner-img">
+          <image src={Homeimage} alt='Banner'/>
+        </div>
         
       </div>
       {/* ==STATEMENT== */}
@@ -51,62 +53,8 @@ function Home() {
           </div>
         </div>
       </div>
-     
-      {/* ==PROGRESS== */}
-      {/* ==PRICING== */}
-       <div className='pricing'>
-        <div className='pricing-header'>
-          <h1>OUR PRICING PLANS</h1>
-          <p>
-            Fitness Arena strives to ensure that all clients receive affordable
-            yet quality experience at the gym <br /> facility. Looking forward
-            to hosting you.
-          </p>
-        </div>
-        <div className='pricing-cards'>
-          <div className='pricing-card'>
-            <section className='pricing-card-package'>MONTHLY PACKAGE</section>
-            <br />
-            
-             <p>
-              PERSONAL TRAINING <br /> NUTRITIONAL GUIDANCE <br /> SPECIALIZED
-              WORKOUTS
-            </p>
-            <Link to='/signup'>
-              <button type='button'>Sign Up</button>
-            </Link>
-          </div>
-          <div className='pricing-card' style={{backgroundColor: "black", border: "1px solid red", scale: "1.3"}}>
-            <section className='pricing-card-package'>
-              QUARTERLY PACKAGE
-            </section>
-            <br />
-            
-            <p>
-              PERSONALIZED TRAINING <br /> NUTRITIONAL GUIDANCE <br />{' '}
-              SPECIALIZED WORKOUTS
-            </p>
-            <Link to='/signup'>
-              <button type='button'>Sign Up</button>
-            </Link>
-          </div>
-          <div className='pricing-card'>
-            <section className='pricing-card-package'>1 YEAR PACKAGE</section>
-            <br />
-            
-            <p>
-              UNLIMITED GYM ACCESS <br /> PERSONALIZED TRAINING <br /> NUTRITIONAL GUIDANCE
-            </p>
-            <Link to='/signup'>
-              <button type='button'>Sign Up</button>
-            </Link>
-          </div>
-        </div> 
       </div>
-    
-      {/* ==PRICING== */ }
-    </div>
-  );
-}
+      );
+  }
 
 export default Home;

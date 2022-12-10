@@ -1,31 +1,55 @@
-import React from 'react';
+import React, {useRef,useState} from 'react';
 import './Login.css';
-
-import { Link, MemoryRouter } from 'react-router-dom';
+// import logo from '../images/logo.jpg';
+import { Link, MemoryRouter} from 'react-router-dom';
 
 function Login() {
-  const history = MemoryRouter ();
+  const baseApiUrl = 'http://localhost:3000';
+  const history = MemoryRouter();
+  const [email, setEmail] = useState()
+  const [password, setPass] = useState()
+  const emailRef = useRef();
+  const passwordRef = useRef();
   function attemptLogin(e) {
     e.preventDefault();
 
     console.log('LOgin Attempt');
 
-    let authFails = false;
-    if (authFails) {
-      console.log('back to login');
-      // return <Redirect to='/login'  />
-      history.push('/login');
-    }
+    // let authFails = false;
+    // if (authFails) {
+    //   console.log('back to login');
+    //   // return <Redirect to='/login'  />
+    //   history.push('/login');
+    // }
     // return <Redirect to='/signup'  />
-    history.push('/');
+    history.push('/houses');
+    function handleAddItem(newUser) {
+      // setItems([...items, newItem]);
+      setEmail(emailRef.current.value);
+      setPass(passwordRef.current.value);
+    }
+    fetch(`${baseApiUrl}/users/sign_in`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    })
+      .then((r) => r.json())
+      .then((newUser) => handleAddItem(newUser));
   }
+ 
+
 
   return (
     <div className='main'>
       <div className='sub-main'>
         <div className='image'>
           <div className='image-container'>
-            {/* <img src={profile} alt='profile' className='profile'></img> */}
+            {/* <img src={logo} alt='profile' className='profile'></img> */}
           </div>
           <div>
             <h1 id='login'>LOG IN</h1>
@@ -38,8 +62,9 @@ function Login() {
                   class='form-control'
                   id='exampleInputEmail1'
                   aria-describedby='emailHelp'
-                  placeholder='Enter email'
+                  placeholder='user email'
                   className='textfield'
+                  onChange={(e)=>setEmail(e.target.value)}
                 />
               </div>
               <div class='form-group'>
@@ -50,6 +75,7 @@ function Login() {
                   id='exampleInputPassword1'
                   placeholder='Password'
                   className='textfield'
+                  onChange={(e)=>setPass(e.target.value)}
                 />
               </div>
 
@@ -75,7 +101,7 @@ function Login() {
                 <div className='col-md-6'>
                   <h4 id='forgotpass'>
                     {' '}
-                    <Link to='/signup'>Forgot your password?</Link>{' '}
+                    <Link to='/Enroll'>Forgot your password?</Link>{' '}
                   </h4>
                 </div>
               </div>
@@ -92,7 +118,7 @@ function Login() {
               <h4 id='newmbr'>
                 {' '}
                 New member?{' '}
-                <Link to='/signup' id='create-acc'>
+                <Link to='/Enroll' id='create-acc'>
                   {' '}
                   Create Account
                 </Link>

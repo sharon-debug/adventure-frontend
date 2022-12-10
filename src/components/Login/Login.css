@@ -1,4 +1,6 @@
-
+body {
+    background: rgb(36, 2, 30);
+}
 .main {
     text-align: center;
     justify-content: center;
@@ -17,7 +19,7 @@
     height: 550px;
     width: 40%;
     padding-top: 30px;
-    color: #ea4e3a;
+    color: rgb(0, 0, 0);
     
     
 }
@@ -74,7 +76,7 @@
 
 .main #create-acc {
 
-    color: #ea4e3a;
+    color: #0f023b;
     text-align: center;
 
 }
@@ -105,7 +107,7 @@
 .main #forgotpass a {
 
     text-align: right;
-    color: #ea4e3a;
+    color: #000000;
     text-decoration: none;
 }
 

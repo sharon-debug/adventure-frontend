@@ -1,6 +1,5 @@
 import React from 'react';
-import "./NavBar.css"
-// import logo from '../img/png-clipart-gym-logo-mark-gym.png';
+import "./NavBar.css";
 import { NavLink, Link } from 'react-router-dom';
 
 function NavBar() {
@@ -50,7 +49,7 @@ function NavBar() {
             </li>
             <li>
               <NavLink
-                to='/contact'
+                to='/contactUs'
                 exact
                 className={({ isActive }) =>
                   isActive ? 'link active' : 'link'
