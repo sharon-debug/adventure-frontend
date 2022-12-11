@@ -140,7 +140,7 @@ function Enroll() {
               <span id='terms'> terms of service and privacy policy </span>{' '}
             </label>
           </div>
-          <Link to="/login">
+          <Link to="/enroll">
             <button
               type='submit'
               class='btn btn-primary'
