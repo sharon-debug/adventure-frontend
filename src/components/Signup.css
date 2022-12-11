@@ -1,13 +1,18 @@
-:root {
-    --primary: #0b3142;
-    --primary-font-color: #d0def1;
-    --secondary-font-color: #e1f52c;
-    --secondary: #12263a;
-    --mint-cream: #f5fffa;
+
+ 
+  .signup{
+    background-color: antiquewhite;
+    display: block;
+    height: 60vh;
+    width: 50vw;
+     margin: 20px;
+     margin-left: 25vw;
+     align-items: center;
+     color: black;
   }
- 
-  
- 
+   .signup div{
+    padding: 10px;
+   }
   .signup-form > label {
     font-size: 18px;
   }

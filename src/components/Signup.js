@@ -1,5 +1,7 @@
 import {useState} from "react"
 import './Signup.css'
+import {Link } from 'react-router-dom'
+
 
 
 
@@ -32,7 +34,9 @@ function Signup ({onLogin}) {
     }
   
     return (
+      <div className="signup">
       <form onSubmit={handleSubmit}>
+        <div>
         <label htmlFor="username">Username:</label>
         <input
           type="text"
@@ -40,13 +44,18 @@ function Signup ({onLogin}) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-         <label htmlFor="email">Email:</label>
+        </div>
+       <div>
+        <label htmlFor="email">Email:</label>
         <input
           type="text"
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+        </div>
+       
+        <div>
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -54,6 +63,9 @@ function Signup ({onLogin}) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        </div>
+        
+        <div>
         <label htmlFor="password_confirmation">Confirm Password:</label>
         <input
           type="password"
@@ -61,9 +73,13 @@ function Signup ({onLogin}) {
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        </div>
+        <div><Link to="/"> <button type="submit">Submit</button></Link></div>
+       
+       
       </form>
+      </div>
     );
   }
-
+   
   export default Signup;
